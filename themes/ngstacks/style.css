@@ -6,14 +6,26 @@ Author URI: http://www.netgainseo.com
 Version: 1.0
 Text Domain: ngstacks
 */
-
 /** SITE COLORS for reference
 
 Dark gray (header/footer): #262729
 Primary Yellow: #FDDD00
 
 */
+body {
+  background-color: #fff; }
 
 .site-header {
-    background-color: #262729;
-}
+  background-color: #262729; }
+
+main {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.site-footer {
+  background-color: #262729; }
+
+.social-container {
+  background-color: #FDDD00; }
+
+/*# sourceMappingURL=style.css.map */

@@ -10,9 +10,9 @@
 
 <body <?php body_class(); ?>>
 
-<header class="site-header">
+<header class="container-fluid site-header">
 
-    <div>
+    <div class="container">
         <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stacks-logo-yellow.png" alt=""></a>
     </div>
 

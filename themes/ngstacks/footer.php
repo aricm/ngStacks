@@ -1,14 +1,13 @@
 
 </main>
 
-<div class="fullwidth row social-container">
-
-social icons
-
+<div class="container-fluid social-container">
+    <div class="container">social icons</div>
 </div>
-<footer class="fullwidth row">
 
-footer
+<footer class="container-fluid site-footer">
+
+    <div class="container">footer</div>
 
 </footer>
 

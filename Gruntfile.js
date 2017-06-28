@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    var themeName = "ngstacks";
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -8,9 +10,9 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'wp-content/themes/schober-farms/src/scss',
+                    cwd: 'themes/' + themeName + '/src/scss',
                     src: ['**/*.scss'],
-                    dest: 'wp-content/themes/schober-farms/src/css',
+                    dest: 'themes/' + themeName,
                     ext: '.css'
                 }]
             }
@@ -25,15 +27,15 @@ module.exports = function(grunt) {
             },
             app: {
                 src: [
-                    'wp-content/themes/schober-farms/src/css/*.css'
+                    'themes/' + themeName + '/src/css/*.css'
                 ],
-                dest: 'wp-content/themes/schober-farms/src/style.css'
+                dest: 'themes/' + themeName + '/css/style.css'
             }
         },
         watch: {
             css: {
-                files: 'wp-content/themes/schober-farms/src/scss/*.scss',
-                tasks: ['sass','concat']
+                files: 'themes/' + themeName + '/src/scss/*.scss',
+                tasks: ['sass']
             }
         }
     });
@@ -46,5 +48,5 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default',['watch']);
-    grunt.registerTask('build',['concat']);
-}
+    grunt.registerTask('build',['sass']);
+};
