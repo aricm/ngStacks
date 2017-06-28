@@ -11,12 +11,18 @@
 # use `git rm --cached`
 
 # ignore everything in the root except the "themes" and "plugins" directory.
-/*
+#/*
+
+uploads/
+upgrade/
+themes/*
+plugins/*
+index.php
 
 #########################
 # don't ignore my theme #
 #########################
-!themes/ngstacks/
+!themes/ngstacks/*
 
 ##############################
 # don't ignore these plugins #

@@ -1,0 +1,19 @@
+/*
+Theme Name: Netgain Stacks
+Theme URI: NA
+Author: Net Gain SEO
+Author URI: http://www.netgainseo.com
+Version: 1.0
+Text Domain: ngstacks
+*/
+
+/** SITE COLORS for reference
+
+Dark gray (header/footer): #262729
+Primary Yellow: #FDDD00
+
+*/
+
+.site-header {
+    background-color: #262729;
+}
