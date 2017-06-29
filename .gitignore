@@ -21,7 +21,8 @@
 #########################
 # don't ignore my theme #
 #########################
-!/themes/ngstacks
+!/themes/ngstacks/
+!/themes/ngstacks/*
 
 ##############################
 # don't ignore these plugins #
