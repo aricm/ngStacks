@@ -17,6 +17,9 @@
 /*/themes/*
 !/themes/
 /themes/*
+/*/plugins/*
+!/plugins/
+/plugins/*
 
 #########################
 # don't ignore my theme #
@@ -27,7 +30,8 @@
 ##############################
 # don't ignore these plugins #
 ##############################
-#!plugins/myplugin/
+!/plugins/modular-selector/
+!/plugins/modular-selector/*
 
 # ignore all files starting with .
 .*

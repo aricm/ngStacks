@@ -12,8 +12,15 @@
 
 <header class="container-fluid site-header">
 
-    <div class="container">
-        <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stacks-logo-yellow.png" alt=""></a>
+    <div class="container" style="justify-content: space-between;">
+        <div class="row justify-content-between">
+            <div class="col-2 header-logo">
+                <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stacks-logo-yellow.png" alt=""></a>
+            </div>
+            <div class="col-10 text-right header-block" style="color: white;">
+                nav and phone
+            </div>
+        </div>
     </div>
 
 </header>

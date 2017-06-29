@@ -13,12 +13,13 @@ Dark gray (header/footer): #262729
 Primary Yellow: #FDDD00
 
 */
-
+$containerWidth: 1175px;
 $darkGrey: #262729;
 $primaryYellow: #FDDD00;
 
 @import "base";
+@import "layout";
 @import "header";
 @import "content";
 @import "footer";
-
+@import "overrides";
