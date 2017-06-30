@@ -36,6 +36,11 @@
 # ignore all files starting with .
 .*
 
+# let dev stuff through
+!gulpfile.js
+!Gruntfile.js
+!package.json
+
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
 

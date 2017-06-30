@@ -1,7 +1,49 @@
 .site-footer {
     background-color: $darkGrey;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 2rem 0;
+    a {
+        color: $primaryYellow;
+        transition: color 0.25s;
+        text-decoration: none;
+        font-weight: 700;
+        &:hover {
+            color: $brandYellow;
+        }
+    }
 }
 .social-container {
     background-color: $primaryYellow;
+    padding: 1rem 0;
+    a {
+        display: inline-block;
+        margin: 0 0.25rem;
+        font-size: 2rem;
+        color: #fff;
+    }
+    i {
+        display: inline;
+        &:hover {
+            box-shadow: 0 10px 10px rgba(black,0.3);
+        }
+    }
 }
 
+.footer-contact {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    min-width: 33%;
+}
+.footer-links {
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+.footer-accredited {
+    margin-left: auto;
+    p:first-of-type {
+        padding-left: 1rem;
+    }
+}

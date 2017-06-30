@@ -7,19 +7,18 @@ Version: 1.0
 Text Domain: ngstacks
 */
 
-/** SITE COLORS for reference
-
-Dark gray (header/footer): #262729
-Primary Yellow: #FDDD00
-
-*/
-$containerWidth: 1175px;
+/** COLORS */
 $darkGrey: #262729;
-$primaryYellow: #FDDD00;
+$primaryYellow: #fddd00;
+$brandYellow: #fae238;
+
+/** OTHER */
+$containerWidth: 1175px;
 
 @import "base";
 @import "layout";
 @import "header";
+@import "_topnav";
 @import "content";
 @import "footer";
 @import "overrides";
