@@ -75,6 +75,22 @@
     }
 }*/
 
+.header-nav-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.search-toggle  {
+    display: block;
+    background: $primaryYellow;
+    color: #fff;
+    padding: 2px 8px;
+    margin-left: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
 .main-navigation {
     align-self: flex-end;
 /*    display: flex;

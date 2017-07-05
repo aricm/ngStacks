@@ -3,9 +3,9 @@
 
 <div class="container-fluid social-container">
     <div class="container text-center">
-    	<a href="#"><i class="fa fa-twitter-square"></i></a>
-    	<a href="#"><i class="fa fa-facebook-square"></i></a>
-    	<a href="#"><i class="fa fa-linkedin-square"></i></a>
+    	<a href="https://twitter.com/STACKSSecure" target="_blank"><i class="fa fa-twitter"></i></a>
+    	<a href="https://www.linkedin.com/company/stacks-llc?trk=top_nav_home" target="_blank"><i class="fa fa-facebook"></i></a>
+    	<a href="http://www.facebook.com/StacksSecureRecords" target="_blank"><i class="fa fa-linkedin"></i></a>
     </div>
 </div>
 

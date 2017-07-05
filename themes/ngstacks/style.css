@@ -11,7 +11,16 @@ Text Domain: ngstacks
 /** OTHER */
 body {
   background-color: #fff;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  color: #222; }
+
+a {
+  color: #fddd00;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  a:hover {
+    color: #ffe84b;
+    text-decoration: none; }
 
 .flex-container {
   display: flex; }
@@ -85,6 +94,20 @@ body {
         }
     }
 }*/
+.header-nav-container {
+  display: flex;
+  margin-left: auto;
+  align-items: center; }
+
+.search-toggle {
+  display: block;
+  background: #fddd00;
+  color: #fff;
+  padding: 2px 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+  text-decoration: none; }
+
 .main-navigation {
   align-self: flex-end;
   /*    display: flex;
@@ -94,15 +117,14 @@ body {
     flex-shrink: 0*/ }
 
 .main-navigation {
-  display: block;
-  float: left;
-  width: 100%; }
+  display: block; }
   .main-navigation ul {
     display: block;
     list-style: none;
     margin: 0;
     padding-left: 0; }
   .main-navigation li {
+    float: left;
     position: relative; }
   .main-navigation a {
     display: block;
@@ -261,7 +283,22 @@ main {
 
 .post-content {
   font-size: 1.1rem;
-  line-height: 1.6; }
+  line-height: 1.6;
+  color: #222; }
+  .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    color: #36393f; }
+  .post-content h1, .post-content h2 {
+    font-weight: 700; }
+  .post-content p {
+    font-style: italic; }
+  .post-content img.float-right, .post-content figure.float-right {
+    padding: 1.5rem 0 1.5rem 1.5rem !important; }
+  .post-content figcaption {
+    font-size: 0.9rem;
+    color: #666; }
+  .post-content .text-22 {
+    font-size: 1.35rem;
+    line-height: 1.75rem; }
 
 .nextend-shadow {
   opacity: 0.4 !important; }
@@ -293,6 +330,149 @@ body.home main {
       padding-top: 25px;
       height: 0; }
 
+.fluidvid-container {
+  display: flex; }
+  .fluidvid-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .fluidvid-container .fluidvid-item {
+    position: relative;
+    padding-bottom: 54.25%;
+    padding-top: 25px;
+    width: 100%;
+    height: 0; }
+
+.btn {
+  border-radius: 0;
+  transition: all 0.25s ease-in-out;
+  font-style: normal;
+  font-weight: 700; }
+
+.btn-stacks {
+  background-color: #fddd00;
+  border-color: #fddd00;
+  color: #36393f; }
+  .btn-stacks:hover {
+    background-color: #cab000;
+    border-color: #cab000; }
+
+form .btn-stacks {
+  color: #fff !important; }
+
+.post-content .btn,
+.home-buttons {
+  text-transform: uppercase; }
+
+.home-cards {
+  background-color: #eee; }
+  .home-cards .container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 140px; }
+
+.card-item-container {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: #36393F;
+  margin: 0 13px 55px 13px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column; }
+  .card-item-container:hover .card-item-icon {
+    top: -80px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2); }
+
+.card-item-icon {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #fddd00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #eee;
+  background-clip: padding-box;
+  transition: top 0.3s ease, box-shadow 0.3s ease, left 0.3s ease; }
+  .card-item-icon img {
+    width: 45px;
+    height: 45px; }
+
+.card-item-label {
+  margin-top: auto;
+  flex: 0 0 50%;
+  align-self: center;
+  font-weight: 700; }
+
+.home-buttons {
+  background: #252628 url(img/call-to-action-bg.png) center center/cover no-repeat;
+  padding: 3.5rem 0; }
+
+.home-buttons .btn {
+  color: #fff !important;
+  display: block !important;
+  width: 250px !important; }
+
+.home-buttons .btn {
+  margin: 0 auto 1rem auto; }
+
+.home-buttons .btn:last-child {
+  margin-bottom: 0; }
+
+.btn-stacks-o {
+  border-color: #fff; }
+  .btn-stacks-o:hover {
+    background-color: #fddd00;
+    border-color: #fddd00; }
+
+.page-form {
+  max-width: 40rem; }
+  .page-form label {
+    color: #262729;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-style: normal !important; }
+    .page-form label small {
+      font-weight: lighter !important;
+      margin-left: 1rem; }
+  .page-form select,
+  .page-form input[type="text"],
+  .page-form input[type="email"],
+  .page-form input[type="password"],
+  .page-form input[type="password"],
+  .page-form input[type="number"],
+  .page-form textarea {
+    display: block;
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    color: rgba(0, 0, 0, 0.75); }
+  .page-form select {
+    padding: 0.3125rem; }
+
 .site-footer {
   background-color: #262729;
   color: #fff;
@@ -310,12 +490,20 @@ body.home main {
   background-color: #fddd00;
   padding: 1rem 0; }
   .social-container a {
+    display: inline-block;
     margin: 0 0.25rem;
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none; }
+    font-size: 1.6rem;
+    text-decoration: none;
+    background: #fff;
+    color: #fddd00;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px; }
     .social-container a:hover {
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+      background: #fddd00;
+      color: #fff; }
   .social-container i {
     display: inline; }
 
@@ -323,7 +511,7 @@ body.home main {
   display: flex;
   flex-grow: 0;
   flex-direction: column;
-  min-width: 33%; }
+  min-width: 25%; }
 
 .footer-links li {
   margin-bottom: 0.5rem; }

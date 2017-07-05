@@ -87,3 +87,27 @@ function container($atts,$content){
     return $return;
 }
 add_shortcode('container','container');
+
+// Card item/links on the front page
+function homeCard($atts,$content){
+    extract( shortcode_atts( array(
+        'text' => 'na',
+        'link' => '#',
+        'icon' => ''
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = stripParagraphs($content);
+
+    $r  = '';
+
+    $r  .= '<a href="' . $link . '" class="card-item-container">';
+        $r .= '<span class="card-item-icon">';
+            $r .= '<img src="' . get_bloginfo('template_url') . '/img/' . $icon . '.png">';
+        $r .= '</span>';
+        $r .= '<span class="card-item-label">' . $content . '</span>';
+    $r .= '</a>';
+
+    return $r;
+}
+add_shortcode('carditem','homeCard');

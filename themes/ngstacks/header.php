@@ -20,20 +20,12 @@
             <div class="header-phone pt-3">
                 <a href="tel:8888329443">888-832-9443</a>
             </div>
-            <!-- <div class="header-nav-container"> -->
+            <div class="header-nav-container">
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
                 </nav><!-- #site-navigation -->
-                <!--             <nav class="header-nav mb-2">
-                    <ul class="nav">
-                        <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Customer Service Center</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Resources &amp; Support</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Company Information</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link btn nav-search-icon"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </nav> -->
-            <!-- </div> -->
+                <a href="javascript:void(0);" class="search-toggle"><i class="fa fa-search"></i></a>
+            </div>
         </div>
     </div>
 

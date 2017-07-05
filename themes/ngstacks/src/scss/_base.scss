@@ -1,5 +1,15 @@
 body {
     background-color: #fff;
     font-family: "Open Sans", sans-serif;
+    color: #222;
 }
 
+a {
+    color: $primaryYellow;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        color: #ffe84b;
+        text-decoration: none;
+    }
+}

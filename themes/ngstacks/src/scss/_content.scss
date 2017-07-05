@@ -6,6 +6,27 @@ main {
 .post-content {
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #222;
+    h1,h2,h3,h4 {
+        color: #36393f;
+    }
+    h1,h2 {
+        font-weight: 700;
+    }
+    p {
+        font-style: italic;
+    }
+    img.float-right, figure.float-right {
+        padding: 1.5rem 0 1.5rem 1.5rem !important;
+    }
+    figcaption {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    .text-22 {
+        font-size: 1.35rem;
+        line-height: 1.75rem;
+    }
 }
 
 .nextend-shadow {
@@ -43,5 +64,175 @@ body.home main {
             padding-top: 25px;
             height: 0;
         }
+    }
+}
+
+// Videos on other pages
+// Could combine this with the above styles later
+.fluidvid-container {
+    display: flex;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .fluidvid-item { // video / iframe trick
+        position: relative;
+        padding-bottom: 54.25%;
+        padding-top: 25px;
+        width: 100%;
+        height: 0;
+    }
+}
+
+// Button overrides
+.btn {
+    border-radius: 0;
+    transition: all 0.25s ease-in-out;
+    font-style: normal;
+    font-weight: 700;
+}
+.btn-stacks {
+    background-color: $primaryYellow;
+    border-color: $primaryYellow;
+    color: #36393f;
+    &:hover {
+        background-color: darken($primaryYellow,10%);
+        border-color: darken($primaryYellow,10%);
+    }
+}
+form .btn-stacks {
+    color: #fff !important;
+}
+.post-content .btn,
+.home-buttons {
+    text-transform: uppercase;
+}
+
+// Cards on the front-page
+.home-cards {
+    background-color: #eee;
+    .container {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 140px;
+    }
+}
+.card-item-container {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: $blueGrey;
+    margin: 0 13px 55px 13px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    &:hover .card-item-icon {
+        top: -80px;
+        box-shadow: 2px 3px 8px rgba(black,0.2);
+    }
+}
+
+.card-item-icon {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: $primaryYellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #eee;
+    background-clip: padding-box;
+    transition: top 0.3s ease, box-shadow 0.3s ease, left 0.3s ease;
+    img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.card-item-label {
+    margin-top: auto;
+    flex: 0 0 50%;
+    align-self: center;
+    font-weight: 700;
+}
+
+// Container for buttons on front page
+.home-buttons {
+    background: #252628 url(img/call-to-action-bg.png) center center / cover no-repeat;
+    padding: 3.5rem 0;
+}
+
+// Buttons on the front-page
+.home-buttons .btn {
+    color: #fff !important;
+    display: block !important;
+    width: 250px !important;
+}
+.home-buttons .btn {
+    margin: 0 auto 1rem auto;
+}
+.home-buttons .btn:last-child {
+    margin-bottom: 0;
+}
+.btn-stacks-o {
+    border-color: #fff;
+    &:hover {
+        background-color: $primaryYellow;
+        border-color: $primaryYellow;
+    }
+}
+
+.page-form {
+    max-width: 40rem;
+    label {
+        color: $darkGrey;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-style: normal !important;
+        small {
+            font-weight: lighter !important;
+            margin-left: 1rem;
+        }
+    }
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    textarea {
+        display: block;
+        width: 100%;
+        height: 2.25rem;
+        border-radius: 0px;
+        box-shadow: none;
+        background-image: none;
+        // -webkit-appearance: none;
+        font-family: inherit;
+        font-size: 0.875rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        background-color: #fff;
+        border: 1px solid #eeeeee;
+        color: rgba(0, 0, 0, 0.75);
+    }
+    select {
+        padding: 0.3125rem;
     }
 }

@@ -20,6 +20,10 @@
 /*/plugins/*
 !/plugins/
 /plugins/*
+/*/uploads/*
+!/uploads/
+
+#/uploads/*
 
 #########################
 # don't ignore my theme #
