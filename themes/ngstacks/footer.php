@@ -53,5 +53,17 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+	jQuery(document).on("scroll", function(){
+		if
+      (jQuery(document).scrollTop() > 25){
+		  jQuery("body").addClass("shrink");
+		}
+		else
+		{
+			jQuery("body").removeClass("shrink");
+		}
+	});
+</script>
 </body>
 </html>

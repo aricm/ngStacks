@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="container-fluid site-header">
+<header class="container-fluid site-header" id="siteHeader">
 
     <div class="container d-flex" style="justify-content: space-between;">
         <div class="header-logo">
@@ -21,8 +21,8 @@
                 <a href="tel:8888329443">888-832-9443</a>
             </div>
             <!-- <div class="header-nav-container"> -->
-                <nav id="site-navigation" class="main-navigation mb-2" role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
                 </nav><!-- #site-navigation -->
                 <!--             <nav class="header-nav mb-2">
                     <ul class="nav">

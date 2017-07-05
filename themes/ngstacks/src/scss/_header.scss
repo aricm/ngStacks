@@ -1,9 +1,26 @@
-
 .site-header {
     background-color: $darkGrey;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 291px;
+    // overflow: hidden;
+    // height: auto;
+    transition: all 0.25s ease-in-out;
+    .container {
+        height: 100%;
+    }
 }
 .header-logo {
+    transition: all 0.25s ease-in-out;
     padding: 17px 0;
+    img {
+        height: 100%;
+        width: auto;
+        transition: all 0.25s ease-in-out;
+    }
 }
 .header-block {
     flex-grow: 1;
@@ -23,6 +40,20 @@
         color: lighten($brandYellow, 10%);
     }
 }
+
+.shrink {
+    margin-top: 100px;
+    .site-header {
+        z-index: 9999;
+        height: 100px;
+        position: fixed;
+        // height: 100px;
+        .header-logo {
+            padding: 8px 0;
+        }
+    }
+}
+
 /*.headernav {
     align-self: flex-end;
     .nav-link {

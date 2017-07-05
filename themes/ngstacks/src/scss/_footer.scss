@@ -17,16 +17,18 @@
     background-color: $primaryYellow;
     padding: 1rem 0;
     a {
-        display: inline-block;
+        // display: inline-block;
         margin: 0 0.25rem;
         font-size: 2rem;
         color: #fff;
-    }
-    i {
-        display: inline;
+        text-decoration: none;
         &:hover {
             box-shadow: 0 10px 10px rgba(black,0.3);
         }
+    }
+    i {
+        display: inline;
+
     }
 }
 

@@ -4,7 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col col-3">
-            sidebar nav
+            <nav id="sidebar-navigation" class="sidebar-navigation" role="navigation">
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+            </nav>
         </div>
         <div class="col col-9 post-content">
             <?php while ( have_posts() ) : the_post(); ?>
