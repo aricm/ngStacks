@@ -4,27 +4,10 @@
 <div class="container">
     <div class="row">
         <div class="col col-3">
-            <?php
+            <h3 class="sidenav-title">
+                Resources &amp; Support
+            </h3>
 
-            // Get the title of the parent page to display above the nav
-            if( is_page($post->ID) && $post->post_parent ) {
-                $children = get_pages('child_of='.$post->post_parent);
-            } else {
-                $children = get_pages('child_of='.$post->ID);
-            }
-
-            ?>
-
-            <?php if($children): ?>
-
-                <h3 class="sidenav-title">
-                    <?php
-                    $parent_title = get_the_title($post->post_parent);
-                    echo $parent_title;
-                    ?>
-                </h3>
-
-            <?php endif;?>
             <nav id="sidenav" class="sidenav" role="navigation">
 
                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
@@ -54,8 +37,23 @@
             </nav>
         </div>
         <div class="col col-9 post-content">
+
+            <div class="embed-responsive embed-responsive-16by9 mb-5">
+                <iframe class="embed-responsive-item" src="//player.vimeo.com/video/208251079?title=1&amp;byline=1&amp;portrait=0&amp;autoplay=0" allowfullscreen="allowfullscreen"></iframe>
+            </div>
+
             <?php while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>
+                <article class="mb-4 pb-4" style="border-bottom: 2px solid #fddd00">
+
+                    <h2 class="post-title">
+                        <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h2>
+
+                    <em><?php the_excerpt(); ?></em>
+
+                    <div style="font-weight: bold;font-style:italic;">Continue reading <a href="<?php the_permalink(); ?>">here...</a></div>
+
+                </article>
             <?php endwhile; // End of the loop. ?>
         </div>
     </div>

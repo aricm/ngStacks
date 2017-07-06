@@ -19,13 +19,13 @@
             </p>
 
             <p>Phone <a href="tel:8888329443">888-832-9443</a><br />
-                <a href="#">Contact</a>
+                <a href="sstrydom@stacks.solutions">Contact</a>
             </p>
             <p>Kansas City Location<br />
                 8600 NE Underground Dr<br />
                 Bldg #84B, Pillar 315<br />
                 Kansas City, MO 64161<br />
-                <a href="#">Contact</a>
+                <a href="http://stacks.dev:81/contact/">Contact</a>
             </p>
 
             <p><a href="#">Sitemap</a></p>
@@ -34,10 +34,10 @@
         </div>
         <div class="footer-links">
             <ul class="list-unstyled">
-                <li><a href="#">Request a Login</a></li>
-                <li><a href="#">Request a File</a></li>
-                <li><a href="#">Estimate Request/Feedback</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="http://stacks.dev:81/servicecenter/request-login/">Request a Login</a></li>
+                <li><a href="https://rsweb.stacks.solutions/RSWebNet/" target="_blank">Request a File</a></li>
+                <li><a href="http://stacks.dev:81/servicecenter/service-request/">Estimate Request/Feedback</a></li>
+                <li><a href="http://stacks.dev:81/contact/">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-accredited">

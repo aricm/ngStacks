@@ -19,6 +19,7 @@
         <div class="header-block">
             <div class="header-phone pt-3">
                 <a href="tel:8888329443">888-832-9443</a>
+                <a href="javascript:void(0);" class="hamburger"><i class="fa fa-bars"></i></a>
             </div>
             <div class="header-nav-container">
                 <nav id="site-navigation" class="main-navigation" role="navigation">

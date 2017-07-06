@@ -47,6 +47,7 @@ add_action( 'after_setup_theme', 'ngstacks_setup' );
  * Enqueue scripts and styles.
  */
 function ngstacks_scripts() {
+	wp_enqueue_style( 'opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i"' );
     wp_enqueue_style( 'bootstrap', get_bloginfo('template_url') . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'fontawsome', get_bloginfo('template_url') . '/css/font-awesome.min.css' );
     wp_enqueue_style( 'ngstack-style', get_stylesheet_uri() );
