@@ -25,6 +25,7 @@
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
                 </nav><!-- #site-navigation -->
+
                 <a href="javascript:void(0);" class="search-toggle"><i class="fa fa-search"></i></a>
             </div>
         </div>

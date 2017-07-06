@@ -8,7 +8,6 @@ Version: 1.0
 Text Domain: ngstacks
 */
 /** COLORS */
-/** OTHER */
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -113,12 +112,7 @@ a {
   text-decoration: none; }
 
 .main-navigation {
-  align-self: flex-end;
-  /*    display: flex;
-    justify-content: flex-end;
-    margin-top: 15px;
-    align-items: flex-end;
-    flex-shrink: 0*/ }
+  align-self: flex-end; }
 
 .hamburger {
   display: block;
@@ -654,7 +648,3 @@ form .btn-stacks {
   margin-left: auto; }
   .footer-accredited p:first-of-type {
     padding-left: 1rem; }
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1175px; } }

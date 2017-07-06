@@ -13,28 +13,8 @@
                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
             </nav>
 
-            <nav class="sidebar-btn-nav">
-                <a href="http://stacks.dev:81/products/store/">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/filled-box.png" alt="">
-                    Store
-                </a>
-                <a href="http://stacks.dev:81/products/store/">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/scanner.png" alt="">
-                    Scan
-                </a>
-                <a href="http://stacks.dev:81/products/scan/">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/shred.png" alt="">
-                    Shred
-                </a>
-                <a href="http://stacks.dev:81/products/shred/container-types/">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/filled-box.png" alt="">
-                    Data Protection
-                </a>
-                <a href="http://stacks.dev:81/companyinfo/testimonials/">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/testimonials.png" alt="">
-                    Testimonials
-                </a>
-            </nav>
+            <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
+
         </div>
         <div class="col col-9 post-content">
 

@@ -58,8 +58,38 @@ function ngstacks_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ngstacks_scripts' );
 
+
+/********/
+
+// remove <br> tags from text widget content, from 4.8 version WP adds these tags
+remove_filter('widget_text_content', 'wpautop');
+
+// Enable the use of shortcodes within widgets.
+add_filter( 'widget_text', 'do_shortcode' );
+
+
+
+/**
+ * Register widgetized areas.
+ *
+ */
+function ngstacks_widget_init() {
+
+    register_sidebar( array(
+        'name'          => 'Page Sidebar',
+        'id'            => 'page_sidebar_1',
+        'before_widget' => '<div class="sb-widget-area">',
+        'after_widget'  => '</div>'
+    ) );
+
+}
+add_action( 'widgets_init', 'ngstacks_widget_init' );
+
+
+
 /**
  * SHORTCODES
+ *
  */
 
 //Remove empty paragraphs
@@ -112,3 +142,15 @@ function homeCard($atts,$content){
     return $r;
 }
 add_shortcode('carditem','homeCard');
+
+// Needed for use in text widget
+function ngstacks_template_directory_uri() {
+    return get_template_directory_uri();
+}
+add_shortcode( 'template_directory', 'ngstacks_template_directory_uri' );
+
+function ngstacks_blog_url() {
+    return get_bloginfo('url');
+}
+add_shortcode( 'site_url', 'ngstacks_blog_url' );
+

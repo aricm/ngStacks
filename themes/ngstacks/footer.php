@@ -25,7 +25,7 @@
                 8600 NE Underground Dr<br />
                 Bldg #84B, Pillar 315<br />
                 Kansas City, MO 64161<br />
-                <a href="http://stacks.dev:81/contact/">Contact</a>
+                <a href="http://stacks.dev:81/resourcs/contact/">Contact</a>
             </p>
 
             <p><a href="#">Sitemap</a></p>
@@ -37,7 +37,7 @@
                 <li><a href="http://stacks.dev:81/servicecenter/request-login/">Request a Login</a></li>
                 <li><a href="https://rsweb.stacks.solutions/RSWebNet/" target="_blank">Request a File</a></li>
                 <li><a href="http://stacks.dev:81/servicecenter/service-request/">Estimate Request/Feedback</a></li>
-                <li><a href="http://stacks.dev:81/contact/">Contact Us</a></li>
+                <li><a href="http://stacks.dev:81/resources/contact/">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-accredited">
