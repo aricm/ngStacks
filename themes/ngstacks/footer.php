@@ -59,26 +59,35 @@
 		if
       (jQuery(document).scrollTop() > 25){
 		  jQuery("body").addClass("shrink");
-		}
-		else
-		{
-			jQuery("body").removeClass("shrink");
+          jQuery("#stickyFormWrap").fadeIn();
+        }
+        else
+        {
+            jQuery("body").removeClass("shrink");
+            jQuery("#stickyFormWrap").hide();
 		}
 	});
 
-	jQuery("#stickyFormLabel a").on("click", function(e) {
-		e.preventDefault();
-		jQuery(this).css('border-radius','0 0 0 0');
-		jQuery("#stickyForm").slideToggle();
+	jQuery("#stickyFormTrigger, #stickyFormCancel").on("click", function() {
+		jQuery("#stickyFormWrap").toggleClass('is-open');
+		jQuery("#stickyForm").stop().slideToggle();
 	});
 
-	jQuery("#stickyForm").focusout(function(e) { // @todo
-		console.log('ugh');
-		jQuery(this).slideUp();
-	});
+	// jQuery("#stickyForm").focusout(function(e) { // @todo
+	// 	console.log('ugh');
+	// 	jQuery(this).stop().slideUp();
+	// });
 
 	var sidenav = jQuery(".sidenav ul ul li.menu-item-has-children > a");
-	console.log(sidenav);
+    sidenav.append('<span class="accordian_toggle is-closed"></span>');
+    console.log(sidenav);
+    jQuery.each(sidenav,function(key,val) {
+        if(jQuery(this).parent().hasClass('current_page_item')) {
+            jQuery(this).children('.accordian_toggle').removeClass('is-closed');
+            // console.log('yes!');
+        }
+        // console.log(val);
+    });
 
 </script>
 </body>

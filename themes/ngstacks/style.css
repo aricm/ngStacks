@@ -121,6 +121,42 @@ a {
   color: #fff !important;
   text-decoration: none; }
 
+.sticky-form-wrap {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 350px;
+  opacity: 0.9;
+  background-color: #fddd00;
+  border-radius: 0 0 8px 8px;
+  border: 2px solid #fddd00;
+  box-shadow: 1px 8px 18px rgba(0, 0, 0, 0.5); }
+  .sticky-form-wrap a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    height: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #262729; }
+    .sticky-form-wrap a:hover, .sticky-form-wrap a:active, .sticky-form-wrap a:focus {
+      text-decoration: none;
+      color: #fff; }
+  .sticky-form-wrap.is-open {
+    opacity: 1; }
+    .sticky-form-wrap.is-open a {
+      color: #fff; }
+
+.sticky-form {
+  display: none;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  background: #fff;
+  margin: 0 2px 2px 2px; }
+
 .main-navigation {
   display: block; }
   .main-navigation ul {
@@ -351,7 +387,7 @@ a {
 .sidenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
   transform: rotate(90deg); }
 
-.accordian_toggle.closed:hover {
+.accordian_toggle.is-closed:hover {
   transform: rotate(90deg); }
 
 .sidenav ul li:not(.current-page-parent) ul,
@@ -394,6 +430,126 @@ a {
     .sidebar-btn-nav a:hover {
       background: #cab000; }
   .sidebar-btn-nav img {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 45px;
+    height: auto; }
+
+.mobilenav {
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  right: 0;
+  width: 350px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fddd00; }
+  .mobilenav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .mobilenav li {
+    position: relative; }
+
+.mobilenav-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: lighter;
+  color: #262729;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem; }
+
+.mobilenav > ul > li > a {
+  display: none; }
+
+.mobilenav ul ul li:not(:last-child) a,
+.mobilenav-title {
+  border-bottom: 1px solid #bbbbbb; }
+
+.mobilenav ul ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px 30px 15px 20px;
+  background: transparent;
+  color: #262729; }
+
+.mobilenav ul ul li > a:hover,
+.mobilenav ul li.current_page_item > a,
+.mobilenav ul ul li.current_page_item > a,
+.mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a {
+  background: #36393F;
+  color: #fff; }
+
+.mobilenav a {
+  display: block;
+  position: relative;
+  font-weight: lighter;
+  text-decoration: none; }
+
+.mobilenav a span.accordian_toggle {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease; }
+
+.mobilenav a span.accordian_toggle:after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "";
+  font-size: 25px; }
+
+.mobilenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.mobilenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+  transform: rotate(90deg); }
+
+.accordian_toggle.closed:hover {
+  transform: rotate(90deg); }
+
+.mobilenav ul li.current-page-parent ul,
+.mobilenav ul li.current-menu-item ul,
+.mobilenav ul ul li.current-menu-item.menu-item-has-children ul,
+.mobilenav ul li.current-page-ancestor ul,
+.mobilenav ul ul li.current-page-parent ul {
+  display: block; }
+
+.mobilenav ul ul ul li:not(:last-child) a {
+  border-bottom: none; }
+
+.mobilenav ul ul ul li a {
+  padding: 10px 20px 10px 40px;
+  background: #f8f8f8;
+  color: #262729; }
+
+.mobilenav ul ul ul li > a:hover,
+.mobilenav ul ul ul li.current_page_item > a {
+  background: #eeeeee;
+  color: #262729; }
+
+.mobile-btn-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem; }
+  .mobile-btn-nav a {
+    border-radius: 7px;
+    padding: 12px 15px;
+    margin: 0.35rem 0;
+    display: block;
+    font-weight: 700;
+    background: #fddd00;
+    color: #36393F;
+    transition: background 0.3s ease; }
+    .mobile-btn-nav a:hover {
+      background: #cab000; }
+  .mobile-btn-nav img {
     display: inline-block;
     margin-right: 1rem;
     width: 45px;

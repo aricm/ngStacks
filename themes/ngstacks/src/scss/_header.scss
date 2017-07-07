@@ -103,3 +103,46 @@
     text-decoration: none;
 }
 
+// Sticky form
+.sticky-form-wrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 350px;
+    opacity: 0.9;
+    background-color: $primaryYellow;
+    // background:
+    border-radius: 0 0 8px 8px;
+    border: 2px solid $primaryYellow;
+    box-shadow: 1px 8px 18px rgba(black,0.5);
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        height: 45px;
+        line-height: 45px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $darkGrey;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    &.is-open {
+        opacity: 1;
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.sticky-form {
+    display: none;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    margin: 0 2px 2px 2px;
+}

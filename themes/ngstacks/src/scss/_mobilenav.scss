@@ -1,4 +1,12 @@
-.sidenav {
+.mobilenav {
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: $primaryYellow;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -9,7 +17,7 @@
 	}
 }
 
-.sidenav-title {
+.mobilenav-title {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: lighter;
@@ -20,15 +28,15 @@
 }
 
 // Hide the parent link
-.sidenav > ul > li > a {
+.mobilenav > ul > li > a {
 	display: none;
 }
 
-.sidenav ul ul li:not(:last-child) a,
-.sidenav-title {
+.mobilenav ul ul li:not(:last-child) a,
+.mobilenav-title {
     border-bottom: 1px solid #bbbbbb;
 }
-.sidenav ul ul li a {
+.mobilenav ul ul li a {
     font-size: 14px;
     text-transform: uppercase;
     padding: 15px 30px 15px 20px;
@@ -36,15 +44,15 @@
     color: $darkGrey;
 }
 
-.sidenav ul ul li > a:hover,
-.sidenav ul li.current_page_item > a,
-.sidenav ul ul li.current_page_item > a,
-.sidenav ul ul li.current-page-ancestor.menu-item-has-children > a {
+.mobilenav ul ul li > a:hover,
+.mobilenav ul li.current_page_item > a,
+.mobilenav ul ul li.current_page_item > a,
+.mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a {
     background: $blueGrey;
     color: #fff;
 }
 
-.sidenav a {
+.mobilenav a {
     display: block;
     position: relative;
     font-weight: lighter;
@@ -52,7 +60,7 @@
 }
 
 // Toggle
-// .sidenav ul ul li.menu-item-has-children > a:after {
+// .mobilenav ul ul li.menu-item-has-children > a:after {
 //     font-family: FontAwesome;
 //     font-style: normal;
 //     font-weight: normal;
@@ -67,11 +75,11 @@
 //     font-size: 25px;
 // }
 
-// .sidenav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
-// .sidenav ul ul li.current-menu-item.menu-item-has-children > a:after {
+// .mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
+// .mobilenav ul ul li.current-menu-item.menu-item-has-children > a:after {
 // 	transform: translateY(-50%) rotate(90deg);
 // }
-.sidenav a span.accordian_toggle {
+.mobilenav a span.accordian_toggle {
     width: 50px;
     height: 100%;
     position: absolute;
@@ -83,7 +91,7 @@
     align-items: center;
     transition: transform 0.25s ease;
 }
-.sidenav a span.accordian_toggle:after {
+.mobilenav a span.accordian_toggle:after {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -92,45 +100,45 @@
     font-size: 25px;
 }
 
-.sidenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
-.sidenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+.mobilenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.mobilenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
 	transform: rotate(90deg);
 }
 
-.accordian_toggle.is-closed:hover {
+.accordian_toggle.closed:hover {
 	transform: rotate(90deg);
 }
 
 // Second Level
-// .sidenav ul ul ul,
-.sidenav ul li:not(.current-page-parent) ul,
-.sidenav ul ul li:not(.current-page-parent) ul {
-	display: none;
+// .mobilenav ul ul ul,
+.mobilenav ul li:not(.current-page-parent) ul,
+.mobilenav ul ul li:not(.current-page-parent) ul {
+	// display: none; // !!! disabled during development!!!
 }
-.sidenav ul li.current-page-parent ul,
-.sidenav ul li.current-menu-item ul,
-.sidenav ul ul li.current-menu-item.menu-item-has-children ul,
-.sidenav ul li.current-page-ancestor ul,
-.sidenav ul ul li.current-page-parent ul {
+.mobilenav ul li.current-page-parent ul,
+.mobilenav ul li.current-menu-item ul,
+.mobilenav ul ul li.current-menu-item.menu-item-has-children ul,
+.mobilenav ul li.current-page-ancestor ul,
+.mobilenav ul ul li.current-page-parent ul {
 	display: block;
 }
-.sidenav ul ul ul li:not(:last-child) a {
+.mobilenav ul ul ul li:not(:last-child) a {
     border-bottom: none;
 }
-.sidenav ul ul ul li a {
+.mobilenav ul ul ul li a {
     padding: 10px 20px 10px 40px;
     background: #f8f8f8;
     color: $darkGrey;
 }
-.sidenav ul ul ul li > a:hover,
-.sidenav ul ul ul li.current_page_item > a {
+.mobilenav ul ul ul li > a:hover,
+.mobilenav ul ul ul li.current_page_item > a {
     background: #eeeeee;
     color: $darkGrey;
 }
 
 
 // Sidebar button nav
-.sidebar-btn-nav {
+.mobile-btn-nav {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;

@@ -29,12 +29,17 @@
                 <a href="javascript:void(0);" class="search-toggle"><i class="fa fa-search"></i></a>
             </div>
         </div>
-        <div id="stickyFormLabel" style="position: absolute;top: 100%;right: 20px; width: 250px;">
-            <a href="#" style="display: block;background: #fddd00;color: #fff;height: 30px;line-height: 30px;border-radius: 0 0 8px 8px;text-align: center;">Hey!</a>
-            <div id="stickyForm" style="display: none;background: #fff;border: 2px solid #fddd00;border-radius: 0 0 8px 8px;padding: 1rem;">
+
+        <div id="stickyFormWrap" class="sticky-form-wrap">
+            <a id="stickyFormTrigger" href="javascript:void(0);">Estimate Request</a>
+            <div id="stickyForm" class="sticky-form">
                 <?php echo do_shortcode( '[contact-form-7 id="290" title="Sticky Contact Us" html_class="page-form"]' ); ?>
             </div>
         </div>
+
+        <nav id="mobilenav" class="mobilenav" role="navigation">
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+        </nav>
     </div>
 
 </header>
