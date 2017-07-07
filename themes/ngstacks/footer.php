@@ -54,7 +54,8 @@
 
 <?php wp_footer(); ?>
 <script>
-	jQuery(document).on("scroll", function(){
+
+	jQuery(document).on("scroll", function() {
 		if
       (jQuery(document).scrollTop() > 25){
 		  jQuery("body").addClass("shrink");
@@ -64,6 +65,21 @@
 			jQuery("body").removeClass("shrink");
 		}
 	});
+
+	jQuery("#stickyFormLabel a").on("click", function(e) {
+		e.preventDefault();
+		jQuery(this).css('border-radius','0 0 0 0');
+		jQuery("#stickyForm").slideToggle();
+	});
+
+	jQuery("#stickyForm").focusout(function(e) { // @todo
+		console.log('ugh');
+		jQuery(this).slideUp();
+	});
+
+	var sidenav = jQuery(".sidenav ul ul li.menu-item-has-children > a");
+	console.log(sidenav);
+
 </script>
 </body>
 </html>

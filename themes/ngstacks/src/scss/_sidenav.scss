@@ -38,7 +38,8 @@
 
 .sidenav ul ul li > a:hover,
 .sidenav ul li.current_page_item > a,
-.sidenav ul ul li.current_page_item > a {
+.sidenav ul ul li.current_page_item > a,
+.sidenav ul ul li.current-page-ancestor.menu-item-has-children > a {
     background: $blueGrey;
     color: #fff;
 }
@@ -51,19 +52,53 @@
 }
 
 // Toggle
-.sidenav ul ul li.menu-item-has-children > a:after {
+// .sidenav ul ul li.menu-item-has-children > a:after {
+//     font-family: FontAwesome;
+//     font-style: normal;
+//     font-weight: normal;
+//     text-decoration: inherit;
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: 0;
+//     padding: 0 1rem;
+//     transform: translateY(-50%);
+//     content: "";
+//     font-size: 25px;
+// }
+
+// .sidenav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
+// .sidenav ul ul li.current-menu-item.menu-item-has-children > a:after {
+// 	transform: translateY(-50%) rotate(90deg);
+// }
+.sidenav a span.accordian_toggle {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.25s ease;
+}
+.sidenav a span.accordian_toggle:after {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    padding: 0 1rem;
-    transform: translateY(-50%);
     content: "";
     font-size: 25px;
+}
+
+.sidenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.sidenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+	transform: rotate(90deg);
+}
+
+.accordian_toggle.closed:hover {
+	transform: rotate(90deg);
 }
 
 // Second Level
@@ -74,7 +109,7 @@
 }
 .sidenav ul li.current-page-parent ul,
 .sidenav ul li.current-menu-item ul,
-.sidenav ul li.current-menu-item.menu-item-has-children ul,
+.sidenav ul ul li.current-menu-item.menu-item-has-children ul,
 .sidenav ul li.current-page-ancestor ul,
 .sidenav ul ul li.current-page-parent ul {
 	display: block;
