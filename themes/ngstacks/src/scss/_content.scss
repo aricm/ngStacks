@@ -3,6 +3,11 @@ main {
     padding: 2rem 0;
 }
 
+@media screen and (max-width: 1200px) {
+    main > .container {
+        width: 100%;
+    }
+}
 .post-content, .blog-post-content {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -15,6 +20,10 @@ main {
     }
     p {
         font-style: italic;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
     }
     img.float-right, figure.float-right {
         padding: 1.5rem 0 1.5rem 1.5rem !important;
@@ -130,7 +139,7 @@ form .btn-stacks {
         align-items: stretch;
         justify-content: center;
         flex-wrap: wrap;
-        padding-top: 140px;
+        padding-top: 80px;
     }
 }
 .card-item-container {
@@ -139,7 +148,7 @@ form .btn-stacks {
     margin: 0;
     position: relative;
     background: $blueGrey;
-    margin: 0 13px 55px 13px;
+    margin: 30px 13px 55px 13px;
     border-radius: 10px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     min-height: 140px;
@@ -177,6 +186,17 @@ form .btn-stacks {
     flex: 0 0 50%;
     align-self: center;
     font-weight: 700;
+}
+
+@media screen and (max-width: 990px) {
+    .card-item-container {
+        flex-basis: 28%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .card-item-container {
+        flex-basis: 100%;
+    }
 }
 
 // Container for buttons on front page
@@ -255,4 +275,30 @@ form .btn-stacks {
 .page-id-262 .post-content p {
     font-size: 80%;
     font-style: normal;
+}
+
+// Sitemap plugin/page
+.wsp-container {
+    .page_item_has_children > a {
+        font-weight: 700;
+        color: darken($primaryYellow,10%);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .post-content, blog-post-content {
+        img.float-right {
+            float: none !important;
+            padding: 0 !important;
+            margin: 1rem auto !important;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+@media screen and (max-width: 980px) {
+    div#n2-ss-2 .n2-ss-layer .n2-font-96b0e670e825504e1c856e1d7e9d05ea-paragraph {
+        opacity: 0.9;
+    }
 }

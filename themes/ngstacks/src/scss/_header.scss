@@ -13,6 +13,7 @@
         height: 100%;
     }
 }
+
 .header-logo {
     transition: all 0.25s ease-in-out;
     padding: 17px 0;
@@ -91,6 +92,31 @@
     text-decoration: none;
 }
 
+.search-bar {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: $brandYellow;
+    padding: 0.5rem 0;
+    z-index: 99999;
+    input[type="text"] {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        padding: 0.25rem;
+        font-size: 1.6rem;
+        color: darken($brandYellow,25%);
+        border-bottom: 1px solid darken($brandYellow,13%);
+        &::placeholder {
+            color: darken($brandYellow,25%);
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
 .main-navigation {
     align-self: flex-end;
 }
@@ -145,4 +171,52 @@
     border-radius: 0 0 8px 8px;
     background: #fff;
     margin: 0 2px 2px 2px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .site-header {
+        height: 150px;
+    }
+    header > .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 790px) {
+    .site-header .container {
+        width: 100%;
+    }
+    .sticky-form-wrap {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 560px) {
+    .header-logo {
+        flex: 0 1 10%;
+        padding: 8px 0;
+        max-width: 100px;
+    }
+    .site-header {
+        height: 100px;
+    }
+    .header-phone {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .hamburger {
+            align-self: flex-end;
+        }
+    }
+    .header-phone {
+        a {
+            font-size: 1.3rem;
+            &.hamburger {
+                font-size: 2.4rem;
+            }
+        }
+
+    }
+
 }

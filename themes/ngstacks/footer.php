@@ -25,19 +25,19 @@
                 8600 NE Underground Dr<br />
                 Bldg #84B, Pillar 315<br />
                 Kansas City, MO 64161<br />
-                <a href="http://stacks.dev:81/resourcs/contact/">Contact</a>
+                <a href="http://209.126.119.193/~stacks/resourcs/contact/">Contact</a>
             </p>
 
-            <p><a href="#">Sitemap</a></p>
+            <p><a href="http://209.126.119.193/~stacks/search/">Sitemap</a></p>
 
             <p>&copy; <?php echo date("Y"); ?> Stacks Solutions</p>
         </div>
         <div class="footer-links">
             <ul class="list-unstyled">
-                <li><a href="http://stacks.dev:81/servicecenter/request-login/">Request a Login</a></li>
+                <li><a href="http://209.126.119.193/~stacks/servicecenter/request-login/">Request a Login</a></li>
                 <li><a href="https://rsweb.stacks.solutions/RSWebNet/" target="_blank">Request a File</a></li>
-                <li><a href="http://stacks.dev:81/servicecenter/service-request/">Estimate Request/Feedback</a></li>
-                <li><a href="http://stacks.dev:81/resources/contact/">Contact Us</a></li>
+                <li><a href="http://209.126.119.193/~stacks/servicecenter/service-request/">Estimate Request/Feedback</a></li>
+                <li><a href="http://209.126.119.193/~stacks/resources/contact/">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-accredited">
@@ -73,6 +73,18 @@
 		jQuery("#stickyForm").stop().slideToggle();
 	});
 
+    jQuery("#searchToggle").on("click", function() {
+        var bar = jQuery("#searchBar");
+        bar.slideToggle();
+        if(bar.is(":visible")) {
+            jQuery("#search").focus();
+        }
+    });
+
+    jQuery("#mobnavTrigger, #xSubnav").on("click", function() {
+        jQuery("#mobnav").toggle();
+    });
+
 	// jQuery("#stickyForm").focusout(function(e) { // @todo
 	// 	console.log('ugh');
 	// 	jQuery(this).stop().slideUp();
@@ -84,9 +96,12 @@
     jQuery.each(subnav,function(key,val) {
         if(jQuery(this).parent().hasClass('current_page_item')) {
             jQuery(this).children('.accordian_toggle').removeClass('is-closed');
-            // console.log('yes!');
         }
-        // console.log(val);
+    });
+    jQuery(".accordian_toggle").on("click",function(e) {
+        e.preventDefault();
+        jQuery(this).parent().next("ul").slideToggle();
+        jQuery(this).toggleClass('is-closed');
     });
 
 </script>

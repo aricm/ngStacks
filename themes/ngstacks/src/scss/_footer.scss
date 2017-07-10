@@ -56,3 +56,22 @@
         padding-left: 1rem;
     }
 }
+
+@media screen and(max-width: 990px) {
+    .footer-accredited {
+        flex-basis: 25%;
+    }
+}
+@media screen and (max-width: 596px) {
+    .site-footer > .container {
+        flex-wrap: wrap;
+    }
+    .footer-contact,
+    .footer-links {
+        text-align: center;
+        flex: 1 0 100%;
+    }
+    .footer-accredited {
+        flex-basis: 66%;
+    }
+}

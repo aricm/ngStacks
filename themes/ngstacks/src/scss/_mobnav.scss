@@ -1,13 +1,17 @@
-.mobnav .subnav {
+.mobnav {
     position: absolute;
     z-index: 9999;
+    display:none;
     top: 100%;
     right: 0;
-    width: 350px;
-    max-height: 400px;
-    overflow-y: auto;
+    width: 400px;
+    max-height: 600px;
+    overflow-y: scroll;
     overflow-x: hidden;
     background: $primaryYellow;
+    box-shadow: -5px 5px 15px rgba(black,0.3);
+}
+.mobnav .subnav {
 	ul {
 		list-style: none;
 		margin: 0;
@@ -18,26 +22,14 @@
 	}
 }
 
-.mobnav .subnav-title {
-	font-size: 24px;
-	line-height: 28px;
-	font-weight: lighter;
-	color: #262729;
-	text-transform: uppercase;
-	margin-bottom: 0;
-	padding-bottom: 0.5rem;
-}
-
 // First level parents
 .mobnav .subnav > ul > li > a {
 	// display: none;
-    background: blue;
-
+    font-size: 1.1rem !important;
 }
 
-.mobnav .subnav ul ul li:not(:last-child) a,
-.mobnav .subnav-title {
-    border-bottom: 1px solid #bbbbbb;
+.mobnav .subnav ul li:not(:last-child) a {
+    border-bottom: 1px solid #ffe531;
 }
 .mobnav .subnav ul li a,
 .mobnav .subnav ul ul li a {
@@ -52,37 +44,15 @@
 .mobnav .subnav ul li.current_page_item > a,
 .mobnav .subnav ul ul li.current_page_item > a,
 .mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a {
-    background: $blueGrey;
-    color: #fff;
+    background: #e4c700;
 }
 
 .mobnav .subnav a {
     display: block;
     position: relative;
-    font-weight: lighter;
+    font-weight: bolder;
     text-decoration: none;
 }
-
-// Toggle
-// .mobnav .subnav ul ul li.menu-item-has-children > a:after {
-//     font-family: FontAwesome;
-//     font-style: normal;
-//     font-weight: normal;
-//     text-decoration: inherit;
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     right: 0;
-//     padding: 0 1rem;
-//     transform: translateY(-50%);
-//     content: "";
-//     font-size: 25px;
-// }
-
-// .mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
-// .mobnav .subnav ul ul li.current-menu-item.menu-item-has-children > a:after {
-// 	transform: translateY(-50%) rotate(90deg);
-// }
 
 .mobnav .subnav a span.accordian_toggle {
     width: 50px;
@@ -94,24 +64,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-left: 1px solid #ffe531;
     transition: transform 0.25s ease;
 }
+
 .mobnav .subnav a span.accordian_toggle:after {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-    content: "";
-    font-size: 25px;
+    content: "";
+    color: darken($brandYellow,30%);
+    font-size: 30px;
 }
 
-.mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
-.mobnav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
-	transform: rotate(90deg);
+// .mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+// .mobnav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+// 	transform: rotate(90deg);
+// }
+
+.accordian_toggle:not(.is-closed):after {
+    transform: rotate(90deg);
 }
 
-.accordian_toggle.closed:hover {
-	transform: rotate(90deg);
+.accordian_toggle.is-closed:hover:after {
+	// transform: rotate(90deg);
 }
 
 // Second Level
@@ -130,14 +107,18 @@
 .mobnav .subnav ul ul ul li:not(:last-child) a {
     border-bottom: none;
 }
-.mobnav .subnav ul ul ul li a {
+.mobnav .subnav ul ul li a {
     padding: 10px 20px 10px 40px;
-    background: #f8f8f8;
+    background: #ffe218;
+}
+.mobnav .subnav ul ul ul li a {
+    padding: 10px 20px 10px 60px;
+    background: #ffe531;
     color: $darkGrey;
 }
 .mobnav .subnav ul ul ul li > a:hover,
 .mobnav .subnav ul ul ul li.current_page_item > a {
-    background: #eeeeee;
+    background: #fddd00;
     color: $darkGrey;
 }
 
@@ -165,5 +146,47 @@
         margin-right: 1rem;
         width: 45px;
         height: auto;
+    }
+}
+
+
+// button nav
+.mobnav .btn-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    a {
+        padding: 12px 15px;
+        margin: 0;
+        display: block;
+        font-weight: 700;
+        background: $brandYellow;
+        color: $blueGrey;
+        transition: background 0.3s ease;
+        &:hover {
+            background: darken($brandYellow,5%);
+        }
+    }
+    img {
+        display: inline-block;
+        margin: 0 1rem;
+        width: 45px;
+        height: auto;
+    }
+}
+
+.xSubnav {
+    background: $brandYellow;
+    text-align: center;
+    a {
+        display: block;
+        color: darken($brandYellow,40%);
+        padding: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .mobnav {
+        width: 100%;
     }
 }

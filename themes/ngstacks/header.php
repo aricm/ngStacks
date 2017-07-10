@@ -19,14 +19,14 @@
         <div class="header-block">
             <div class="header-phone pt-3">
                 <a href="tel:8888329443">888-832-9443</a>
-                <a href="javascript:void(0);" class="hamburger"><i class="fa fa-bars"></i></a>
+                <a href="javascript:void(0);" class="hamburger hidden-xl-up" id="mobnavTrigger"><i class="fa fa-bars"></i></a>
             </div>
-            <div class="header-nav-container">
+            <div class="header-nav-container hidden-lg-down">
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
                 </nav><!-- #site-navigation -->
 
-                <a href="javascript:void(0);" class="search-toggle"><i class="fa fa-search"></i></a>
+                <a href="javascript:void(0);" class="search-toggle" id="searchToggle"><i class="fa fa-search"></i></a>
             </div>
         </div>
 
@@ -37,13 +37,26 @@
             </div>
         </div>
 
-        <div class="mobnav">
-            <nav id="mobnav" class="subnav" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-            </nav>
+    </div>
+
+    <div id="searchBar" class="search-bar" style="display: none;">
+        <div class="container">
+            <form action="/" method="get" class="form-inline">
+                <input type="text" class="form-control" name="s" id="search" placeholder="SEARCH">
+            </form>
         </div>
     </div>
 
+    <div id="mobnav" class="mobnav hidden-xl-up">
+        <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
+
+        <nav class="subnav" role="navigation">
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+        </nav>
+        <div id="xSubnav" class="xSubnav">
+            <a href="javascript:void(0);"><i class="fa fa-times"></i> CLOSE</a>
+        </div>
+    </div>
 </header>
 
 <main>
