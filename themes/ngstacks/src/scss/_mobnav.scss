@@ -1,4 +1,4 @@
-.mobilenav {
+.mobnav .subnav {
     position: absolute;
     z-index: 9999;
     top: 100%;
@@ -6,18 +6,19 @@
     width: 350px;
     max-height: 400px;
     overflow-y: auto;
+    overflow-x: hidden;
     background: $primaryYellow;
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	}
-	li {
+    }
+    li {
 		position: relative;
 	}
 }
 
-.mobilenav-title {
+.mobnav .subnav-title {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: lighter;
@@ -27,16 +28,19 @@
 	padding-bottom: 0.5rem;
 }
 
-// Hide the parent link
-.mobilenav > ul > li > a {
-	display: none;
+// First level parents
+.mobnav .subnav > ul > li > a {
+	// display: none;
+    background: blue;
+
 }
 
-.mobilenav ul ul li:not(:last-child) a,
-.mobilenav-title {
+.mobnav .subnav ul ul li:not(:last-child) a,
+.mobnav .subnav-title {
     border-bottom: 1px solid #bbbbbb;
 }
-.mobilenav ul ul li a {
+.mobnav .subnav ul li a,
+.mobnav .subnav ul ul li a {
     font-size: 14px;
     text-transform: uppercase;
     padding: 15px 30px 15px 20px;
@@ -44,15 +48,15 @@
     color: $darkGrey;
 }
 
-.mobilenav ul ul li > a:hover,
-.mobilenav ul li.current_page_item > a,
-.mobilenav ul ul li.current_page_item > a,
-.mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a {
+.mobnav .subnav ul ul li > a:hover,
+.mobnav .subnav ul li.current_page_item > a,
+.mobnav .subnav ul ul li.current_page_item > a,
+.mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a {
     background: $blueGrey;
     color: #fff;
 }
 
-.mobilenav a {
+.mobnav .subnav a {
     display: block;
     position: relative;
     font-weight: lighter;
@@ -60,7 +64,7 @@
 }
 
 // Toggle
-// .mobilenav ul ul li.menu-item-has-children > a:after {
+// .mobnav .subnav ul ul li.menu-item-has-children > a:after {
 //     font-family: FontAwesome;
 //     font-style: normal;
 //     font-weight: normal;
@@ -75,11 +79,12 @@
 //     font-size: 25px;
 // }
 
-// .mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
-// .mobilenav ul ul li.current-menu-item.menu-item-has-children > a:after {
+// .mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a:after,
+// .mobnav .subnav ul ul li.current-menu-item.menu-item-has-children > a:after {
 // 	transform: translateY(-50%) rotate(90deg);
 // }
-.mobilenav a span.accordian_toggle {
+
+.mobnav .subnav a span.accordian_toggle {
     width: 50px;
     height: 100%;
     position: absolute;
@@ -91,7 +96,7 @@
     align-items: center;
     transition: transform 0.25s ease;
 }
-.mobilenav a span.accordian_toggle:after {
+.mobnav .subnav a span.accordian_toggle:after {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -100,8 +105,8 @@
     font-size: 25px;
 }
 
-.mobilenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
-.mobilenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+.mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.mobnav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
 	transform: rotate(90deg);
 }
 
@@ -110,28 +115,28 @@
 }
 
 // Second Level
-// .mobilenav ul ul ul,
-.mobilenav ul li:not(.current-page-parent) ul,
-.mobilenav ul ul li:not(.current-page-parent) ul {
-	// display: none; // !!! disabled during development!!!
+// .mobnav .subnav ul ul ul,
+.mobnav .subnav ul li:not(.current-page-parent) ul,
+.mobnav .subnav ul ul li:not(.current-page-parent) ul {
+	display: none; // !!! disabled during development!!!
 }
-.mobilenav ul li.current-page-parent ul,
-.mobilenav ul li.current-menu-item ul,
-.mobilenav ul ul li.current-menu-item.menu-item-has-children ul,
-.mobilenav ul li.current-page-ancestor ul,
-.mobilenav ul ul li.current-page-parent ul {
+.mobnav .subnav ul li.current-page-parent ul,
+.mobnav .subnav ul li.current-menu-item ul,
+.mobnav .subnav ul ul li.current-menu-item.menu-item-has-children ul,
+.mobnav .subnav ul li.current-page-ancestor ul,
+.mobnav .subnav ul ul li.current-page-parent ul {
 	display: block;
 }
-.mobilenav ul ul ul li:not(:last-child) a {
+.mobnav .subnav ul ul ul li:not(:last-child) a {
     border-bottom: none;
 }
-.mobilenav ul ul ul li a {
+.mobnav .subnav ul ul ul li a {
     padding: 10px 20px 10px 40px;
     background: #f8f8f8;
     color: $darkGrey;
 }
-.mobilenav ul ul ul li > a:hover,
-.mobilenav ul ul ul li.current_page_item > a {
+.mobnav .subnav ul ul ul li > a:hover,
+.mobnav .subnav ul ul ul li.current_page_item > a {
     background: #eeeeee;
     color: $darkGrey;
 }

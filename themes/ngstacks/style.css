@@ -319,15 +319,15 @@ a {
   content: "+";
   padding-left: 5px; }
 
-.sidenav ul {
+.sidenav .subnav ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-.sidenav li {
+.sidenav .subnav li {
   position: relative; }
 
-.sidenav-title {
+.sidenav .subnav-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: lighter;
@@ -336,34 +336,34 @@ a {
   margin-bottom: 0;
   padding-bottom: 0.5rem; }
 
-.sidenav > ul > li > a {
+.sidenav .subnav > ul > li > a {
   display: none; }
 
-.sidenav ul ul li:not(:last-child) a,
-.sidenav-title {
+.sidenav .subnav ul ul li:not(:last-child) a,
+.sidenav .subnav-title {
   border-bottom: 1px solid #bbbbbb; }
 
-.sidenav ul ul li a {
+.sidenav .subnav ul ul li a {
   font-size: 14px;
   text-transform: uppercase;
   padding: 15px 30px 15px 20px;
   background: transparent;
   color: #262729; }
 
-.sidenav ul ul li > a:hover,
-.sidenav ul li.current_page_item > a,
-.sidenav ul ul li.current_page_item > a,
-.sidenav ul ul li.current-page-ancestor.menu-item-has-children > a {
+.sidenav .subnav ul ul li > a:hover,
+.sidenav .subnav ul li.current_page_item > a,
+.sidenav .subnav ul ul li.current_page_item > a,
+.sidenav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a {
   background: #36393F;
   color: #fff; }
 
-.sidenav a {
+.sidenav .subnav a {
   display: block;
   position: relative;
   font-weight: lighter;
   text-decoration: none; }
 
-.sidenav a span.accordian_toggle {
+.sidenav .subnav a span.accordian_toggle {
   width: 50px;
   height: 100%;
   position: absolute;
@@ -375,7 +375,7 @@ a {
   align-items: center;
   transition: transform 0.25s ease; }
 
-.sidenav a span.accordian_toggle:after {
+.sidenav .subnav a span.accordian_toggle:after {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -383,42 +383,42 @@ a {
   content: "";
   font-size: 25px; }
 
-.sidenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
-.sidenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+.sidenav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.sidenav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
   transform: rotate(90deg); }
 
 .accordian_toggle.is-closed:hover {
   transform: rotate(90deg); }
 
-.sidenav ul li:not(.current-page-parent) ul,
-.sidenav ul ul li:not(.current-page-parent) ul {
+.sidenav .subnav ul li:not(.current-page-parent) ul,
+.sidenav .subnav ul ul li:not(.current-page-parent) ul {
   display: none; }
 
-.sidenav ul li.current-page-parent ul,
-.sidenav ul li.current-menu-item ul,
-.sidenav ul ul li.current-menu-item.menu-item-has-children ul,
-.sidenav ul li.current-page-ancestor ul,
-.sidenav ul ul li.current-page-parent ul {
+.sidenav .subnav ul li.current-page-parent ul,
+.sidenav .subnav ul li.current-menu-item ul,
+.sidenav .subnav ul ul li.current-menu-item.menu-item-has-children ul,
+.sidenav .subnav ul li.current-page-ancestor ul,
+.sidenav .subnav ul ul li.current-page-parent ul {
   display: block; }
 
-.sidenav ul ul ul li:not(:last-child) a {
+.sidenav .subnav ul ul ul li:not(:last-child) a {
   border-bottom: none; }
 
-.sidenav ul ul ul li a {
+.sidenav .subnav ul ul ul li a {
   padding: 10px 20px 10px 40px;
   background: #f8f8f8;
   color: #262729; }
 
-.sidenav ul ul ul li > a:hover,
-.sidenav ul ul ul li.current_page_item > a {
+.sidenav .subnav ul ul ul li > a:hover,
+.sidenav .subnav ul ul ul li.current_page_item > a {
   background: #eeeeee;
   color: #262729; }
 
-.sidebar-btn-nav {
+.sidenav .btn-nav {
   display: flex;
   flex-direction: column;
   margin-top: 1rem; }
-  .sidebar-btn-nav a {
+  .sidenav .btn-nav a {
     border-radius: 7px;
     padding: 12px 15px;
     margin: 0.35rem 0;
@@ -427,15 +427,15 @@ a {
     background: #fddd00;
     color: #36393F;
     transition: background 0.3s ease; }
-    .sidebar-btn-nav a:hover {
+    .sidenav .btn-nav a:hover {
       background: #cab000; }
-  .sidebar-btn-nav img {
+  .sidenav .btn-nav img {
     display: inline-block;
     margin-right: 1rem;
     width: 45px;
     height: auto; }
 
-.mobilenav {
+.mobnav .subnav {
   position: absolute;
   z-index: 9999;
   top: 100%;
@@ -443,15 +443,16 @@ a {
   width: 350px;
   max-height: 400px;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #fddd00; }
-  .mobilenav ul {
+  .mobnav .subnav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-  .mobilenav li {
+  .mobnav .subnav li {
     position: relative; }
 
-.mobilenav-title {
+.mobnav .subnav-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: lighter;
@@ -460,34 +461,35 @@ a {
   margin-bottom: 0;
   padding-bottom: 0.5rem; }
 
-.mobilenav > ul > li > a {
-  display: none; }
+.mobnav .subnav > ul > li > a {
+  background: blue; }
 
-.mobilenav ul ul li:not(:last-child) a,
-.mobilenav-title {
+.mobnav .subnav ul ul li:not(:last-child) a,
+.mobnav .subnav-title {
   border-bottom: 1px solid #bbbbbb; }
 
-.mobilenav ul ul li a {
+.mobnav .subnav ul li a,
+.mobnav .subnav ul ul li a {
   font-size: 14px;
   text-transform: uppercase;
   padding: 15px 30px 15px 20px;
   background: transparent;
   color: #262729; }
 
-.mobilenav ul ul li > a:hover,
-.mobilenav ul li.current_page_item > a,
-.mobilenav ul ul li.current_page_item > a,
-.mobilenav ul ul li.current-page-ancestor.menu-item-has-children > a {
+.mobnav .subnav ul ul li > a:hover,
+.mobnav .subnav ul li.current_page_item > a,
+.mobnav .subnav ul ul li.current_page_item > a,
+.mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children > a {
   background: #36393F;
   color: #fff; }
 
-.mobilenav a {
+.mobnav .subnav a {
   display: block;
   position: relative;
   font-weight: lighter;
   text-decoration: none; }
 
-.mobilenav a span.accordian_toggle {
+.mobnav .subnav a span.accordian_toggle {
   width: 50px;
   height: 100%;
   position: absolute;
@@ -499,7 +501,7 @@ a {
   align-items: center;
   transition: transform 0.25s ease; }
 
-.mobilenav a span.accordian_toggle:after {
+.mobnav .subnav a span.accordian_toggle:after {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -507,30 +509,34 @@ a {
   content: "";
   font-size: 25px; }
 
-.mobilenav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
-.mobilenav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
+.mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
+.mobnav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
   transform: rotate(90deg); }
 
 .accordian_toggle.closed:hover {
   transform: rotate(90deg); }
 
-.mobilenav ul li.current-page-parent ul,
-.mobilenav ul li.current-menu-item ul,
-.mobilenav ul ul li.current-menu-item.menu-item-has-children ul,
-.mobilenav ul li.current-page-ancestor ul,
-.mobilenav ul ul li.current-page-parent ul {
+.mobnav .subnav ul li:not(.current-page-parent) ul,
+.mobnav .subnav ul ul li:not(.current-page-parent) ul {
+  display: none; }
+
+.mobnav .subnav ul li.current-page-parent ul,
+.mobnav .subnav ul li.current-menu-item ul,
+.mobnav .subnav ul ul li.current-menu-item.menu-item-has-children ul,
+.mobnav .subnav ul li.current-page-ancestor ul,
+.mobnav .subnav ul ul li.current-page-parent ul {
   display: block; }
 
-.mobilenav ul ul ul li:not(:last-child) a {
+.mobnav .subnav ul ul ul li:not(:last-child) a {
   border-bottom: none; }
 
-.mobilenav ul ul ul li a {
+.mobnav .subnav ul ul ul li a {
   padding: 10px 20px 10px 40px;
   background: #f8f8f8;
   color: #262729; }
 
-.mobilenav ul ul ul li > a:hover,
-.mobilenav ul ul ul li.current_page_item > a {
+.mobnav .subnav ul ul ul li > a:hover,
+.mobnav .subnav ul ul ul li.current_page_item > a {
   background: #eeeeee;
   color: #262729; }
 

@@ -78,10 +78,10 @@
 	// 	jQuery(this).stop().slideUp();
 	// });
 
-	var sidenav = jQuery(".sidenav ul ul li.menu-item-has-children > a");
-    sidenav.append('<span class="accordian_toggle is-closed"></span>');
-    console.log(sidenav);
-    jQuery.each(sidenav,function(key,val) {
+	var subnav = jQuery(".subnav li.menu-item-has-children > a");
+    subnav.append('<span class="accordian_toggle is-closed"></span>');
+    console.log(subnav);
+    jQuery.each(subnav,function(key,val) {
         if(jQuery(this).parent().hasClass('current_page_item')) {
             jQuery(this).children('.accordian_toggle').removeClass('is-closed');
             // console.log('yes!');

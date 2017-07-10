@@ -25,12 +25,14 @@
                 </h3>
 
             <?php endif;?>
-            <nav id="sidenav" class="sidenav" role="navigation">
+            <div class="sidenav">
+                <nav id="subnav" class="subnav" role="navigation">
+                   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+                </nav>
 
-               <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-            </nav>
+                <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
+            </div>
 
-            <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
 
         </div>
         <div class="col col-lg-9 col-md-12 post-content">

@@ -37,9 +37,11 @@
             </div>
         </div>
 
-        <nav id="mobilenav" class="mobilenav" role="navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-        </nav>
+        <div class="mobnav">
+            <nav id="mobnav" class="subnav" role="navigation">
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+            </nav>
+        </div>
     </div>
 
 </header>

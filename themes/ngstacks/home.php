@@ -8,12 +8,15 @@
                 Resources &amp; Support
             </h3>
 
-            <nav id="sidenav" class="sidenav" role="navigation">
+            <div class="sidenav">
+                <nav id="sidenav" class="subnav" role="navigation">
 
-               <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-            </nav>
+                   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+                </nav>
 
-            <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
+                <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
+            </div>
+
 
         </div>
         <div class="col col-9 post-content">
