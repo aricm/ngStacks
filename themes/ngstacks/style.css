@@ -28,6 +28,14 @@ a {
 main {
   position: relative; }
 
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 2rem; }
+  h2 {
+    font-size: 1.6rem; }
+  h3 {
+    font-size: 1.35rem; } }
+
 .flex-container {
   display: flex; }
 
@@ -428,8 +436,7 @@ main {
   right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: transform 0.25s ease; }
+  align-items: center; }
 
 .sidenav .subnav a span.accordian_toggle:after {
   font-family: FontAwesome;
@@ -437,13 +444,14 @@ main {
   font-weight: normal;
   text-decoration: inherit;
   content: "";
-  font-size: 25px; }
+  font-size: 25px;
+  transition: transform 0.25s ease; }
 
 .sidenav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
 .sidenav .subnav ul ul li.current-menu-item.menu-item-has-children .accordian_toggle:after {
   transform: rotate(90deg); }
 
-.accordian_toggle.is-closed:hover {
+.accordian_toggle.is-closed:hover:after {
   transform: rotate(90deg); }
 
 .sidenav .subnav ul li:not(.current-page-parent) ul,
@@ -522,7 +530,7 @@ main {
 .mobnav .subnav ul ul li a {
   font-size: 14px;
   text-transform: uppercase;
-  padding: 15px 30px 15px 20px;
+  padding: 15px 55px 15px 20px;
   background: transparent;
   color: #262729; }
 
@@ -548,8 +556,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid #ffe531;
-  transition: transform 0.25s ease; }
+  border-left: 1px solid #ffe531; }
 
 .mobnav .subnav a span.accordian_toggle:after {
   font-family: FontAwesome;
@@ -558,9 +565,13 @@ main {
   text-decoration: inherit;
   content: "";
   color: #958304;
-  font-size: 30px; }
+  font-size: 30px;
+  transition: transform 0.25s ease; }
 
 .accordian_toggle:not(.is-closed):after {
+  transform: rotate(90deg); }
+
+.accordian_toggle.is-closed:hover:after {
   transform: rotate(90deg); }
 
 .mobnav .subnav ul li:not(.current-page-parent) ul,
@@ -578,11 +589,11 @@ main {
   border-bottom: none; }
 
 .mobnav .subnav ul ul li a {
-  padding: 10px 20px 10px 40px;
+  padding: 10px 55px 10px 40px;
   background: #ffe218; }
 
 .mobnav .subnav ul ul ul li a {
-  padding: 10px 20px 10px 60px;
+  padding: 10px 55px 10px 60px;
   background: #ffe531;
   color: #262729; }
 
@@ -668,7 +679,8 @@ main {
     padding: 1.5rem 0 1.5rem 1.5rem !important; }
   .post-content figcaption, .blog-post-content figcaption {
     font-size: 0.9rem;
-    color: #666; }
+    color: #666;
+    padding: 1.5rem 0 1.5rem 1.5rem !important; }
   .post-content .text-22, .blog-post-content .text-22 {
     font-size: 1.35rem;
     line-height: 1.75rem; }
@@ -763,7 +775,7 @@ form .btn-stacks {
   margin: 0;
   position: relative;
   background: #36393F;
-  margin: 30px 13px 55px 13px;
+  margin: 60px 13px 55px 13px;
   border-radius: 10px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   min-height: 140px;
@@ -800,7 +812,8 @@ form .btn-stacks {
 
 @media screen and (max-width: 990px) {
   .card-item-container {
-    flex-basis: 28%; } }
+    flex-basis: 28%;
+    margin-top: 30px; } }
 
 @media screen and (max-width: 460px) {
   .card-item-container {

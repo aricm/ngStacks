@@ -3,7 +3,7 @@
 ?>
 <div class="container">
     <div class="row">
-        <div class="col col-3">
+        <div class="col col-lg-3 hidden-md-down">
             <h3 class="sidenav-title">
                 Resources &amp; Support
             </h3>
@@ -19,7 +19,7 @@
 
 
         </div>
-        <div class="col col-9 post-content">
+        <div class="col col-lg-9 col-md-12 post-content">
 
             <div class="embed-responsive embed-responsive-16by9 mb-5">
                 <iframe class="embed-responsive-item" src="//player.vimeo.com/video/208251079?title=1&amp;byline=1&amp;portrait=0&amp;autoplay=0" allowfullscreen="allowfullscreen"></iframe>

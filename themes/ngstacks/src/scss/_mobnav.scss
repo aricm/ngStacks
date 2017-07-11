@@ -35,7 +35,7 @@
 .mobnav .subnav ul ul li a {
     font-size: 14px;
     text-transform: uppercase;
-    padding: 15px 30px 15px 20px;
+    padding: 15px 55px 15px 20px;
     background: transparent;
     color: $darkGrey;
 }
@@ -65,7 +65,6 @@
     justify-content: center;
     align-items: center;
     border-left: 1px solid #ffe531;
-    transition: transform 0.25s ease;
 }
 
 .mobnav .subnav a span.accordian_toggle:after {
@@ -76,6 +75,7 @@
     content: "";
     color: darken($brandYellow,30%);
     font-size: 30px;
+    transition: transform 0.25s ease;
 }
 
 // .mobnav .subnav ul ul li.current-page-ancestor.menu-item-has-children .accordian_toggle:after,
@@ -88,7 +88,7 @@
 }
 
 .accordian_toggle.is-closed:hover:after {
-	// transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 // Second Level
@@ -108,11 +108,11 @@
     border-bottom: none;
 }
 .mobnav .subnav ul ul li a {
-    padding: 10px 20px 10px 40px;
+    padding: 10px 55px 10px 40px;
     background: #ffe218;
 }
 .mobnav .subnav ul ul ul li a {
-    padding: 10px 20px 10px 60px;
+    padding: 10px 55px 10px 60px;
     background: #ffe531;
     color: $darkGrey;
 }

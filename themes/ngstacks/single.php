@@ -3,7 +3,7 @@
 ?>
 <div class="container">
     <div class="row">
-        <div class="col col-3">
+        <div class="col col-lg-3 hidden-md-down">
             <div class="sidenav">
                 <nav id="subnav" class="subnav" role="navigation">
 
@@ -15,7 +15,7 @@
 
 
         </div>
-        <div class="col col-9 blog-post-content">
+        <div class="col col-lg-9 col-md-12 blog-post-content">
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
             <?php endwhile; // End of the loop. ?>

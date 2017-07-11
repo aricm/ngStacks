@@ -31,6 +31,7 @@ main {
     figcaption {
         font-size: 0.9rem;
         color: #666;
+        padding: 1.5rem 0 1.5rem 1.5rem !important;
     }
     .text-22 {
         font-size: 1.35rem;
@@ -148,7 +149,7 @@ form .btn-stacks {
     margin: 0;
     position: relative;
     background: $blueGrey;
-    margin: 30px 13px 55px 13px;
+    margin: 60px 13px 55px 13px;
     border-radius: 10px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     min-height: 140px;
@@ -191,6 +192,7 @@ form .btn-stacks {
 @media screen and (max-width: 990px) {
     .card-item-container {
         flex-basis: 28%;
+        margin-top: 30px;
     }
 }
 @media screen and (max-width: 460px) {
