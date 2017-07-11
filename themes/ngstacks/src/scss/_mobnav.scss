@@ -5,8 +5,10 @@
     top: 100%;
     right: 0;
     width: 400px;
-    max-height: 600px;
+    max-height: 400px;
+    // height: 400px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     background: $primaryYellow;
     box-shadow: -5px 5px 15px rgba(black,0.3);

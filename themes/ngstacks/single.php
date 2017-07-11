@@ -5,10 +5,7 @@
     <div class="row">
         <div class="col col-lg-3 hidden-md-down">
             <div class="sidenav">
-                <nav id="subnav" class="subnav" role="navigation">
-
-                   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-                </nav>
+                <a class="btn btn-block btn-stacks" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><i class="fa fa-long-arrow-left"></i> Back to blog</a>
 
                 <?php dynamic_sidebar( 'page_sidebar_1' ); ?>
             </div>

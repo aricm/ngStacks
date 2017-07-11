@@ -82,7 +82,11 @@
     });
 
     jQuery("#mobnavTrigger, #xSubnav").on("click", function() {
-        jQuery("#mobnav").toggle();
+        var maxHeight = jQuery(window).height() - jQuery("#siteHeader").height();
+        var navEl = jQuery("#mobnav");
+        jQuery("body").toggleClass("noscroll");
+        navEl.css("max-height",maxHeight).toggle();
+        // navEl.toggle();
     });
 
 	// jQuery("#stickyForm").focusout(function(e) { // @todo
@@ -104,6 +108,26 @@
         jQuery(this).toggleClass('is-closed');
     });
 
+    jQuery(document).on('click','#stickyFormWrap,#mobnav,#stickyFormTrigger,.hamburger',function(e){
+       e.stopPropagation();
+    });
+    jQuery(document).on('click','#stickyFormTrigger',function(e){
+       if(jQuery('#mobnav').is(':visible')) {
+           jQuery('#mobnav').slideToggle();
+       }
+    });
+    jQuery(document).on('click','.hamburger',function(e){
+       jQuery('.is-open #stickyForm').slideToggle();
+       jQuery('.is-open').removeClass('is-open');
+    });
+    jQuery(document).on('click','body',function(){
+       jQuery('.is-open #stickyForm').slideToggle();
+       jQuery('.is-open').removeClass('is-open');
+       if(jQuery('#mobnav').is(':visible')) {
+           jQuery('#mobnav').slideToggle();
+       }
+       jQuery('.noscroll').removeClass('noscroll');
+    });
 </script>
 </body>
 </html>
