@@ -119,6 +119,25 @@ function container($atts,$content){
 }
 add_shortcode('container','container');
 
+// Bootstrap's responsive video
+function responsive_video_shortcode($atts){
+    extract( shortcode_atts( array(
+        'ratio'   => '16by9',
+        'url'   => '',
+        'class' => ''
+    ), $atts ) );
+
+    $url = str_ireplace(array('http://','https://'), '', $url);
+
+    $return = '';
+    $return .= '<div class="embed-responsive embed-responsive-' . $ratio . ' ' . $class .'">';
+    $return .= '<iframe class="embed-responsive-item" src="//' . $url . '" allowfullscreen="allowfullscreen"></iframe>';
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('responsive_video','responsive_video_shortcode');
+
+
 // Card item/links on the front page
 function homeCard($atts,$content){
     extract( shortcode_atts( array(

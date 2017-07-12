@@ -32,8 +32,9 @@ var sassOptions = {
 gulp.task('sass', function () {
   return gulp
     .src(cssSrc)
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./'))
     // .pipe(autoprefixer()) // use default options (see above)
     .pipe(gulp.dest(cssDest));
 });

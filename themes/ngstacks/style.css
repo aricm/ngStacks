@@ -54,14 +54,14 @@ main {
   top: 0;
   left: 0;
   z-index: 999;
-  height: 291px;
+  height: 160px;
   transition: all 0.25s ease-in-out; }
   .site-header .container {
     height: 100%; }
 
 .header-logo {
   transition: all 0.25s ease-in-out;
-  padding: 17px 0; }
+  padding: 8px 0; }
   .header-logo img {
     height: 100%;
     width: auto;
@@ -693,41 +693,9 @@ body.home main {
 .home-video {
   padding: 45px 0;
   background: #36393F;
-  color: #fff;
-  display: flex; }
+  color: #fff; }
   .home-video p {
-    font-size: 0.9rem; }
-  .home-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-  .home-video .container {
-    display: flex;
-    flex-direction: column; }
-    .home-video .container p {
-      flex: 0 1 100%; }
-    .home-video .container p:first-of-type {
-      position: relative;
-      padding-bottom: 54.25%;
-      padding-top: 25px;
-      height: 0; }
-
-.fluidvid-container {
-  display: flex; }
-  .fluidvid-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-  .fluidvid-container .fluidvid-item {
-    position: relative;
-    padding-bottom: 54.25%;
-    padding-top: 25px;
-    width: 100%;
-    height: 0; }
+    font-size: 0.95rem; }
 
 .btn {
   border-radius: 0;
@@ -866,7 +834,7 @@ form .btn-stacks {
   .page-form select {
     padding: 0.3125rem; }
   .page-form .textarea-lg {
-    height: 12rem; }
+    height: 6rem; }
 
 .page-id-262 .post-content p {
   font-size: 80%;
@@ -877,8 +845,8 @@ form .btn-stacks {
   color: #cab000; }
 
 @media screen and (max-width: 980px) {
-  div#n2-ss-2 .n2-ss-layer .n2-font-96b0e670e825504e1c856e1d7e9d05ea-paragraph {
-    opacity: 0.8; } }
+  .n2-ss-layer {
+    display: none; } }
 
 @media screen and (max-width: 680px) {
   .post-content img.float-right, .blog-post-content img.float-right {
@@ -911,6 +879,11 @@ form .btn-stacks {
     padding-left: 0.5rem; }
   .page-form .textarea-lg {
     height: 3rem; } }
+
+.blog-listing article:not(:last-child) {
+  border-bottom: 2px solid #fddd00;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem; }
 
 .post-title a {
   color: #36393F;
@@ -979,3 +952,5 @@ form .btn-stacks {
     flex: 1 0 100%; }
   .footer-accredited {
     flex-basis: 66%; } }
+
+/*# sourceMappingURL=style.css.map */

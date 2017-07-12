@@ -25,8 +25,9 @@
                 <iframe class="embed-responsive-item" src="//player.vimeo.com/video/208251079?title=1&amp;byline=1&amp;portrait=0&amp;autoplay=0" allowfullscreen="allowfullscreen"></iframe>
             </div>
 
+            <div class="blog-listing">
             <?php while ( have_posts() ) : the_post(); ?>
-                <article class="mb-4 pb-4" style="border-bottom: 2px solid #fddd00">
+                <article>
 
                     <h2 class="post-title">
                         <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -38,6 +39,8 @@
 
                 </article>
             <?php endwhile; // End of the loop. ?>
+            </div>
+
         </div>
     </div>
 </div>

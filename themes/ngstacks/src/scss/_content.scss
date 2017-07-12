@@ -62,51 +62,11 @@ body.home main {
     padding: 45px 0;
     background: $blueGrey;
     color: #fff;
-    display: flex;
     p {
-        font-size: 0.9rem;
-    }
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .container {
-        display:flex;
-        flex-direction: column;
-        p {
-            flex: 0 1 100%
-        }
-        p:first-of-type { // video / iframe trick
-            position: relative;
-            padding-bottom: 54.25%;
-            padding-top: 25px;
-            height: 0;
-        }
+        font-size: 0.95rem;
     }
 }
 
-// Videos on other pages
-// Could combine this with the above styles later
-.fluidvid-container {
-    display: flex;
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .fluidvid-item { // video / iframe trick
-        position: relative;
-        padding-bottom: 54.25%;
-        padding-top: 25px;
-        width: 100%;
-        height: 0;
-    }
-}
 
 // Button overrides
 .btn {
@@ -269,7 +229,7 @@ form .btn-stacks {
         padding: 0.3125rem;
     }
     .textarea-lg {
-        height: 12rem;
+        height: 6rem;
     }
 }
 
@@ -288,8 +248,9 @@ form .btn-stacks {
 }
 
 @media screen and (max-width: 980px) {
-    div#n2-ss-2 .n2-ss-layer .n2-font-96b0e670e825504e1c856e1d7e9d05ea-paragraph {
-        opacity: 0.8;
+    .n2-ss-layer {
+        // opacity: 0.8;
+        display: none;
     }
 }
 

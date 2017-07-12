@@ -4,8 +4,8 @@
 <div class="container-fluid social-container">
     <div class="container text-center">
     	<a href="https://twitter.com/STACKSSecure" target="_blank"><i class="fa fa-twitter"></i></a>
-    	<a href="https://www.linkedin.com/company/stacks-llc?trk=top_nav_home" target="_blank"><i class="fa fa-facebook"></i></a>
-    	<a href="http://www.facebook.com/StacksSecureRecords" target="_blank"><i class="fa fa-linkedin"></i></a>
+    	<a href="https://www.linkedin.com/company/stacks-llc?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin"></i></a>
+    	<a href="http://www.facebook.com/StacksSecureRecords" target="_blank"><i class="fa fa-facebook"></i></a>
     </div>
 </div>
 
@@ -19,7 +19,7 @@
             </p>
 
             <p>Phone <a href="tel:8888329443">888-832-9443</a><br />
-                <a href="sstrydom@stacks.solutions">Contact</a>
+                <a href="mailto:sstrydom@stacks.solutions">Contact</a>
             </p>
             <p>Kansas City Location<br />
                 8600 NE Underground Dr<br />
@@ -96,7 +96,7 @@
 
 	var subnav = jQuery(".subnav li.menu-item-has-children > a");
     subnav.append('<span class="accordian_toggle is-closed"></span>');
-    console.log(subnav);
+    // console.log(subnav);
     jQuery.each(subnav,function(key,val) {
         if(jQuery(this).parent().hasClass('current_page_item')) {
             jQuery(this).children('.accordian_toggle').removeClass('is-closed');

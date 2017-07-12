@@ -14,7 +14,7 @@
 
     <div class="container d-flex" style="justify-content: space-between;">
         <div class="header-logo">
-            <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stacks-logo-yellow.png" alt=""></a>
+            <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stacks-logo-yellow-sm.png" alt=""></a>
         </div>
         <div class="header-block">
             <div class="header-phone pt-3">

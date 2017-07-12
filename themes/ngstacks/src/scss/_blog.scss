@@ -1,3 +1,11 @@
+.blog-listing {
+    article:not(:last-child) {
+        border-bottom: 2px solid #fddd00;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
 .post-title a {
     color: $blueGrey;
     transition: all 0.3s ease;
