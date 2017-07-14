@@ -248,9 +248,16 @@ form .btn-stacks {
 }
 
 @media screen and (max-width: 980px) {
-    .n2-ss-layer {
+    .slide-header {
+      font-size: 60% !important;
+      text-align: center !important;
+    }
+    .slide-text p {
+        background: rgba(black,0.5) !important;
+        font-size: 100% !important;
         // opacity: 0.8;
-        display: none;
+        // display: none;
+        // font-size: 1em !important;
     }
 }
 

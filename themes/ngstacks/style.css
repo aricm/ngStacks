@@ -845,8 +845,12 @@ form .btn-stacks {
   color: #cab000; }
 
 @media screen and (max-width: 980px) {
-  .n2-ss-layer {
-    display: none; } }
+  .slide-header {
+    font-size: 60% !important;
+    text-align: center !important; }
+  .slide-text p {
+    background: rgba(0, 0, 0, 0.5) !important;
+    font-size: 100% !important; } }
 
 @media screen and (max-width: 680px) {
   .post-content img.float-right, .blog-post-content img.float-right {
