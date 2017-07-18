@@ -173,3 +173,23 @@ function ngstacks_blog_url() {
 }
 add_shortcode( 'site_url', 'ngstacks_blog_url' );
 
+// Container
+function element($atts,$content){
+    extract( shortcode_atts( array(
+        'selector' => '',
+        'class'    => '',
+        'id'       => '',
+        'style'    => ''
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = stripParagraphs($content);
+
+    $return = '';
+    $return .= '<'. $selector .' id="' . $id . '" class="' .  $class . '" style="'. $style .'">';
+        $return .= force_balance_tags($content);
+    $return .= '</'. $selector .'>';
+    return $return;
+}
+add_shortcode('element','element');
+

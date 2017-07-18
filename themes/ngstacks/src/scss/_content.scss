@@ -263,13 +263,14 @@ form .btn-stacks {
 
 @media screen and (max-width: 680px) {
     .post-content, .blog-post-content {
-        img.float-right {
+        .float-right {
             float: none !important;
             padding: 0 !important;
             margin: 1rem auto !important;
             position: relative;
             left: 50%;
             transform: translateX(-50%);
+            display: inline-block;
         }
     }
 }

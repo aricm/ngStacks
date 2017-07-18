@@ -853,13 +853,14 @@ form .btn-stacks {
     font-size: 100% !important; } }
 
 @media screen and (max-width: 680px) {
-  .post-content img.float-right, .blog-post-content img.float-right {
+  .post-content .float-right, .blog-post-content .float-right {
     float: none !important;
     padding: 0 !important;
     margin: 1rem auto !important;
     position: relative;
     left: 50%;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%);
+    display: inline-block; } }
 
 @media screen and (max-width: 560px) {
   .page-form label {
